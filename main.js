@@ -10,6 +10,8 @@ Math.toBinary = function(arg) {
 RegExp.prototype.getAll = function() {
 if(this.ignoreCase===true) {
 var bin = 1;
+        var arr = [];
+
 for (var i=0; i<Math.factorial(this.source.length); i++) {
 bin=Math.toBinary(i+1);
     var str = "";
@@ -20,8 +22,10 @@ bin=Math.toBinary(i+1);
                 str = str+this.source[a].toLowerCase();
 
         }
+        arr.push(str);
     }
 }
+    return arr;
 } else {
 console.error(Error("Can't find all of anything but /(text)/i"));
 return undefined;
