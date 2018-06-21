@@ -17,9 +17,9 @@ bin=Math.toBinary(i+1);
     var str = "";
     for (var a=this.source.length-1; a>-1; a--) {
         if(bin[a] === 1) {
-        str = this.source[a].toUpperCase()+str;
+        str = String(this.source[a]).toUpperCase()+str;
         } else {
-                str = this.source[a].toLowerCase()+str;
+                str = String(this.source[a]).toLowerCase()+str;
 
         }
         
