@@ -19,12 +19,16 @@ bin=Math.toBinary(i+1);
     for (var a=this.source.length-1; a>-1; a--) {
         if(bin[a] === 1) {
         str = String(this.source[a]).toUpperCase()+str;
+                    console.log(String(this.source[a]).toUpperCase());
+
         } else {
                 str = String(this.source[a]).toLowerCase()+str;
+        console.log(String(this.source[a]).toLowerCase());
 
         }
-        
     }
+            console.log(str);
+
     arr.push(str);
 }
     return arr;
