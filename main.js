@@ -9,9 +9,18 @@ Math.toBinary = function(arg) {
 }
 RegExp.prototype.getAll = function() {
 if(this.ignoreCase===true) {
-var bins = [];
+var bin = 1;
 for (var i=0; i<Math.factorial(this.source.length); i++) {
-bins.push(Math.toBinary(i+1));
+bin=Math.toBinary(i+1);
+    var str = "";
+    for (var a=this.source.length; a>0; a--) {
+        if(bin[a] === 1) {
+        str = str+this.source[a].toUpperCase();
+        } else {
+                str = str+this.source[a].toLowerCase();
+
+        }
+    }
 }
 } else {
 console.error(Error("Can't find all of anything but /(text)/i"));
