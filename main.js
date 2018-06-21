@@ -12,7 +12,7 @@ if(this.ignoreCase===true) {
 var bin = 1;
         var arr = [];
 
-for (var i=0; i<Math.factorial(this.source.length); i++) {
+for (var i=-1; i<Math.factorial(this.source.length)+1; i++) {
 bin=Math.toBinary(i+1);
     console.log(bin);
     var str = "";
