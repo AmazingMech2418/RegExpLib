@@ -17,13 +17,14 @@ bin=Math.toBinary(i+1);
     var str = "";
     for (var a=this.source.length-1; a>-1; a--) {
         if(bin[a] === 1) {
-        str = str+this.source[a].toUpperCase();
+        str = this.source[a].toUpperCase()+str;
         } else {
-                str = str+this.source[a].toLowerCase();
+                str = this.source[a].toLowerCase()+str;
 
         }
-        arr.push(str);
+        
     }
+    arr.push(str);
 }
     return arr;
 } else {
