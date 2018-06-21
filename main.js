@@ -14,6 +14,7 @@ var bin = 1;
 
 for (var i=0; i<Math.factorial(this.source.length); i++) {
 bin=Math.toBinary(i+1);
+    console.log(bin);
     var str = "";
     for (var a=this.source.length-1; a>-1; a--) {
         if(bin[a] === 1) {
